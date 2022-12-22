@@ -21,7 +21,10 @@ var Sichtbarkeit_info = document.getElementById("invis")
 
 
 function Sichtbarkeit(){
-    document.getElementById("Info").style.visibility = "visible";
+    if (document.getElementById("Info").style.visibility == "hidden"){
+        document.getElementById("Info").style.visibility = "visible";
+    }else
+    document.getElementById("Info").style.visibility = "hidden";
 }
 
 function getdata_Home() {
