@@ -17,7 +17,12 @@ var Besprechungsraum1_body = document.body.classList.contains("Besprechungsraum1
 var Besprechungsraum2_body = document.body.classList.contains("Besprechungsraum2");
 var Buero_body = document.body.classList.contains("Buero");
 var Produktionshalle_body = document.body.classList.contains("Produktionshalle");
+var Sichtbarkeit_info = document.getElementById("invis")
 
+
+function Sichtbarkeit(){
+    document.getElementById("Info").style.visibility = "visible";
+}
 
 function getdata_Home() {
     var serverKommunikation = new XMLHttpRequest();
@@ -76,8 +81,8 @@ function getdata_Home() {
 
           if (Bereich != "0"){
                 Bereich.innerHTML = Name +  "<br>Abteilung: " + JSONobj[raum][Name].abteilung +
-                                    "<br>arbeitsBeginn: " + JSONobj[raum][Name].arbeitsBeginn +
-                                    "<br>geburtsdatum: " + JSONobj[raum][Name].geburtsdatum ;
+                                    "<br>Arbeitsbeginn: " + JSONobj[raum][Name].arbeitsBeginn +
+                                    "<br>Geburtsdatum: " + JSONobj[raum][Name].geburtsdatum ;
                                 }
 
                                 
@@ -92,6 +97,7 @@ function getdata_Home() {
     serverKommunikation.send();
 };
 
+Sichtbarkeit_info.onclick = function() {Sichtbarkeit();}
 getdata_Home();
 
 setInterval(function(){getdata_Home()}, 2000); 

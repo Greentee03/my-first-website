@@ -7,7 +7,8 @@ ul {
     width: 100%;
     display: flex;
     flex-direction: row;
-    text-align: center;  
+    text-align: center;
+    font-size: 1.2em;  
   }
 li {
     /*margin: 0.5em;*/
@@ -37,4 +38,28 @@ li {
     display: inline-block;
     width: auto;
     background-color: darkgray;
+    position: relative;
+    font-size: 1.1em;
   }
+
+#Info{
+  margin: 0em;
+  font-size: 1.5em;
+  color: red;
+	visibility: hidden;
+}
+
+#Rueckmeldung{
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+
+img{
+  margin-top: 1em;
+  width: auto;
+  height: 24.5em;
+  /*display: inline-block;*/
+  position: relative;
+  float: left;
+}
